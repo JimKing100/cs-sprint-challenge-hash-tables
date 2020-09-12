@@ -1,8 +1,16 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+
+    pairs = {}
+    result = []
+
+    for i in range(len(a)):
+        if a[i] > 0:
+            pairs[i] = a[i]
+
+    for i in range(len(a)):
+        if a[i] < 0:
+            if -a[i] in pairs.values():
+                result.append(-a[i])
 
     return result
 
